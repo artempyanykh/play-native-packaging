@@ -1,0 +1,8 @@
+# For play application we need this configuration, since play uses separate pidfile
+-Dpidfile.path=/var/run/${{app_name}}/play.pid
+
+# Use separate configuration file for production environment
+-Dconfig.file=/usr/share/${{app_name}}/conf/production.conf
+
+# You may also want to include this setting if you use play evolutions
+-DapplyEvolutions.default=true
